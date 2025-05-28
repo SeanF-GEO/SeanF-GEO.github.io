@@ -10,7 +10,7 @@ format:
 
 ---
 
-## 🔥 Work History
+##  Work History
 
 ### Fire Ecology Research Fellow (ORISE funding by USFS)
 
