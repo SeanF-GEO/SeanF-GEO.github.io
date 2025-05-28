@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
   <title>Sean F. | GIS Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
   <style>
     body {
       font-family: 'Segoe UI', Roboto, Helvetica, sans-serif;
@@ -54,7 +53,7 @@
       align-items: flex-start;
     }
 
-    .section img, .gallery img {
+    .section img {
       width: 100%;
       height: auto;
       border-radius: 8px;
@@ -74,9 +73,16 @@
     }
 
     .gallery {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
       gap: 1rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+      border-radius: 8px;
     }
 
     .lightbox {
@@ -121,7 +127,7 @@
     <div class="text">
       <h2>Graduate Research Assistant, Cal Poly Humboldt</h2>
       <p>I conducted spatial and statistical analyses to assess phenology changes and its relation to change in above ground live biomass and drought-related tree damage and mortality. I utilized Python, R, Oracle VM VirtualBox, Ubuntu, and Linux to create Landsat angle files to produce cloud-free time series satellite imagery using a multistep process in ENVI/IDL software to correct for differences in solar and sensor angles, stack the time series, mask out water pixels, screen for clouds and shadows, and repair Landsat images. Generated spectral indices including EVI, NDMI, and NDVI, extracted phenology metrics, and harmonized data with Forest Inventory and Analysis data. Conducted multivariate statistical analyses and currently writing final thesis and manuscript for future publication.</p>
-      <a href="https://digitalcommons.humboldt.edu/etd/787/" target="_blank">Read Thesis</a>
+      <p><a href="https://digitalcommons.humboldt.edu/etd/787/" target="_blank">Read Thesis</a></p>
     </div>
   </div>
 
@@ -131,14 +137,15 @@
       <p>I utilized the software LANDIS-II to model fire emissions in the Lake Tahoe bioregion. I also utilized Python and R to georeference and extract values from 30,000 raster images. Data sources such as gridMET, PRISM, and TERRAclimate were used in conjunction with forest software to determine fuel quantity and fire severity. GPS and GIS software were used to determine the best location for tree core sampling. The deliverables were completed technical reports, presentations, and outreach materials such as PowerPoints, published documents, and maps for projects.</p>
     </div>
     <div class="images">
-      <img src="Shasta_Trinity_map-01.png" alt="Map" onclick="openLightbox(this.src)" />
+      <img src="Shasta_Trinity_map-01.png" alt="Shasta Trinity Map" onclick="openLightbox(this.src)" />
     </div>
   </div>
 
   <div class="section">
     <div class="text">
-      <h2>Augmented Reality Sandbox Manager, Cal Poly Humboldt</h2>
-      <p>Built and maintained an augmented reality sandbox at Cal Poly Humboldt. <a href="https://www.youtube.com/watch?v=KxtqFZSNDHQ" target="_blank">Watch Video</a></p>
+      <h2>Augmented Reality Sandbox Manager</h2>
+      <p>Built and maintained an augmented reality sandbox at Cal Poly Humboldt.</p>
+      <p><a href="https://www.youtube.com/watch?v=KxtqFZSNDHQ" target="_blank">Watch Video</a></p>
     </div>
     <div class="images">
       <img src="sandbox.jpg" alt="Sandbox Image" onclick="openLightbox(this.src)" />
@@ -167,32 +174,28 @@
 
   <h2>Publications</h2>
   <ul>
-    <li>Gurung, B., Peterson, B. A., Fleming, S., et al. (2025)...</li>
-    <li>Zhu, X., Helmer, E. H., Fleming, S., et al. (2021)...</li>
-    <li>Fleming, S. (2019)...</li>
-    <li>Madurapperuma, B., Fleming, S., et al. (2019)...</li>
-    <li>Madurapperuma, B., Fleming, S., et al. (2018)...</li>
+    <li>Gurung, B., Peterson, B. A., Fleming, S., et al. (2025). Identification of High Fire Potential and High-Use Spatial Intersections... Annals of the AAG.</li>
+    <li>Zhu, X., Helmer, E. H., Fleming, S., et al. (2021). Dry-Season Phenology in Tropical Forests. Remote Sensing 13(23).</li>
+    <li>Fleming, S. (2019). Yosemite & Zion National Park. Humboldt Journal of Social Relations.</li>
+    <li>Madurapperuma, B., Fleming, S., et al. (2019). Social Values in Dunes Trust. HJSR.</li>
+    <li>Madurapperuma, B., Fleming, S., et al. (2018). Ma-le'l Dunes UAV Mapping. Remote Sensing Conf.</li>
   </ul>
 
-  <h2>Conferences & Posters</h2>
-  <ul>
-    <li>IASNR 2023 — Fire Potential & Recreation (Poster)</li>
-    <li>AGU 2020 — Phenology & Drought</li>
-    <li>GIS Day 2019 — 1st Place, Graduate Map Design</li>
-    <li>NACIS 2019 — Tongass Forest Map</li>
-    <li>Salmonid Conference 2019 — VELMA Modeling</li>
-    <li>GIS Day 2017–2018 — Organizer & Presenter</li>
-    <li>INRSEP/CNRS 2017 — UAV Dune Mapping</li>
-  </ul>
-
-  <div class="lightbox" id="lightbox" onclick="this.style.display='none'">
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
     <img id="lightbox-img" src="" alt="Full Size" />
   </div>
 
   <script>
     function openLightbox(src) {
-      document.getElementById('lightbox-img').src = src;
-      document.getElementById('lightbox').style.display = 'flex';
+      const lightbox = document.getElementById('lightbox');
+      const img = document.getElementById('lightbox-img');
+      img.src = src;
+      lightbox.style.display = 'flex';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+      document.getElementById('lightbox-img').src = '';
     }
   </script>
 </body>
