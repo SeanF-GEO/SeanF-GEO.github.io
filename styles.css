@@ -4,7 +4,7 @@ body {
   margin: 2rem auto;
   padding: 0 1rem;
   background-color: #ffe8c2;
-  color: #435239;
+  color: #435239 !important; /* force correct text color */
   line-height: 1.7;
 }
 
@@ -13,17 +13,19 @@ h1 {
   margin-bottom: 1.5rem;
   border-bottom: 2px solid #435239;
   padding-bottom: 0.5rem;
+  color: #435239 !important;
 }
 
 h2, h3 {
   margin-top: 2rem;
-  color: #435239;
+  color: #435239 !important;
 }
 
 a {
-  color: #435239;
+  color: #435239 !important;
   font-weight: 600;
   text-decoration: underline;
+  font-size: 1.1rem;
 }
 
 a:hover {
@@ -46,10 +48,9 @@ p {
 
 ul {
   padding-left: 1.2rem;
+  color: #435239 !important;
 }
 
-hr {
-  margin: 2rem 0;
-  border: none;
-  border-top: 1px solid #435239;
+li {
+  margin-bottom: 0.5rem;
 }
