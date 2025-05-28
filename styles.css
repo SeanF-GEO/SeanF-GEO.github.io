@@ -4,7 +4,7 @@ body {
   margin: 2rem auto;
   padding: 0 1rem;
   background-color: #ffe8c2;
-  color: #435239 !important; /* force correct text color */
+  color: #435239 !important;
   line-height: 1.7;
 }
 
@@ -53,4 +53,13 @@ ul {
 
 li {
   margin-bottom: 0.5rem;
+}
+
+.big-link {
+  font-size: 1.3rem;
+  font-weight: bold;
+  display: inline-block;
+  margin: 0.5rem 0;
+  color: #435239 !important;
+  text-decoration: underline;
 }
