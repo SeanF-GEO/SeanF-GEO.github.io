@@ -28,4 +28,4 @@
 
 ## 📬 Contact
 
-[Email](mailto:you@example.com) • [GitHub](https://github.com/SeanF-GEO) • [LinkedIn](https://linkedin.com/in/your-profile)
+[Email](mailto:you@example.com) • [GitHub](https://github.com/SeanF-GEO)
