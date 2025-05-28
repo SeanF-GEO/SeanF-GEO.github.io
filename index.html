@@ -1,67 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
   <title>Sean F. | GIS Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Roboto, Helvetica, sans-serif;
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      background-color: #ffe8c2;
+      color: #435239;
+      line-height: 1.7;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid #435239;
+      padding-bottom: 0.5rem;
+    }
+
+    h2 {
+      margin-top: 2rem;
+    }
+
+    a {
+      color: #435239;
+      font-weight: 600;
+      text-decoration: underline;
+      font-size: 1.1rem;
+    }
+
+    a:hover {
+      opacity: 0.8;
+    }
+
+    .big-link {
+      font-size: 1.3rem;
+      font-weight: bold;
+      display: inline-block;
+      margin: 0.5rem 0;
+    }
+
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .section img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid #435239;
+      max-height: 300px;
+    }
+
+    .text, .images {
+      flex: 1 1 45%;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .gallery img {
+      flex: 1 1 48%;
+      max-height: 300px;
+    }
+  </style>
 </head>
-
 <body>
-
   <h1>Sean F. — GIS & Remote Sensing Portfolio</h1>
 
-  <h2>Fire Ecology Research Fellow (ORISE funding by USFS)</h2>
-  <p>
-    I developed GIS models to assess the potential impact of wildfires on recreational areas in Southern California’s National Forests. This was accomplished by creating scenario-based analyses under dry and moderate environmental conditions to identify high-risk recreational sites. This work supports forest management and safety planning. The deliverables were ArcGIS Online interactive Web Maps and StoryMaps to display data for USFS staff. (These publications are currently under review, so I attached screenshots and a PDF example rather than the web maps themselves.)
-  </p>
-  <img src="ANF_WEBMAP.png" alt="Web Map" />
-  <p><a href="Cleveland_StoryMap.pdf" target="_blank" class="big-link">PDF Example</a></p>
+  <div class="section">
+    <div class="text">
+      <h2>Fire Ecology Research Fellow (ORISE funding by USFS)</h2>
+      <p>I developed GIS models to assess the potential impact of wildfires on recreational areas in Southern California’s National Forests...</p>
+      <a href="Cleveland_StoryMap.pdf" target="_blank" class="big-link">PDF Example</a>
+      <p>I also designed and implemented Python, R, and Google Earth Engine GIS tools...</p>
+    </div>
+    <div class="images">
+      <img src="ANF_WEBMAP.png" alt="Web Map" />
+      <img src="ANTE_FINAL_smaller.jpg" alt="Fire Severity" />
+    </div>
+  </div>
 
-  <p>
-    I also designed and implemented Python, R, and Google Earth Engine GIS tools to automate the downloading and processing of thousands of satellite images. These images were used to conduct near real-time fire detection analyses across Northern California and compare results with fire severity models that I produced to enhance historical wildfire severity understanding.
-  </p>
-  <img src="ANTE_FINAL_smaller.jpg" alt="Fire Severity" />
+  <div class="section">
+    <div class="text">
+      <h2>Graduate Research Assistant, Cal Poly Humboldt</h2>
+      <p>I conducted spatial and statistical analyses to assess phenology changes...</p>
+      <a href="https://digitalcommons.humboldt.edu/etd/787/" target="_blank">Read Thesis</a>
+    </div>
+  </div>
 
-  <h2>Graduate Research Assistant, Cal Poly Humboldt</h2>
-  <p>
-    I conducted spatial and statistical analyses to assess phenology changes and its relation to change in above ground live biomass and drought-related tree damage and mortality. I utilized Python, R, Oracle VM VirtualBox, Ubuntu, and Linux to create Landsat angle files to produce cloud-free time series satellite imagery using a multistep process in ENVI/IDL software to correct for differences in solar and sensor angles, stack the time series, mask out water pixels, screen for clouds and shadows, and repair Landsat images. Generated spectral indices including EVI, NDMI, and NDVI, extracted phenology metrics, and harmonized data with Forest Inventory and Analysis data. Conducted multivariate statistical analyses and currently writing final thesis and manuscript for future publication.
-  </p>
-  <p><a href="https://digitalcommons.humboldt.edu/etd/787/" target="_blank">Read Thesis</a></p>
+  <div class="section">
+    <div class="text">
+      <h2>GIS & Remote Sensing Student Research Assistant</h2>
+      <p>I utilized the software LANDIS-II to model fire emissions...</p>
+    </div>
+    <div class="images">
+      <img src="Shasta_Trinity_map-01.png" alt="Map" />
+    </div>
+  </div>
 
-  <h2>GIS & Remote Sensing Student Research Assistant</h2>
-  <p>
-    I utilized the software LANDIS-II to model fire emissions in the Lake Tahoe bioregion. I also utilized Python and R to georeference and extract values from 30,000 raster images. Data sources such as gridMET, PRISM, and TERRAclimate were used in conjunction with forest software to determine fuel quantity and fire severity. GPS and GIS software were used to determine the best location for tree core sampling. The deliverables were completed technical reports, presentations, and outreach materials such as PowerPoints, published documents, and maps for projects.
-  </p>
-  <img src="Shasta_Trinity_map-01.png" alt="Shasta Trinity Map" />
+  <div class="section">
+    <div class="text">
+      <h2>Augmented Reality Sandbox Manager, Cal Poly Humboldt</h2>
+      <p>Built and maintained an augmented reality sandbox...
+        <a href="https://www.youtube.com/watch?v=KxtqFZSNDHQ" target="_blank">Watch Video</a>
+      </p>
+    </div>
+    <div class="images">
+      <img src="sandbox.jpg" alt="Sandbox Image" />
+    </div>
+  </div>
 
-  <h2>Augmented Reality Sandbox Manager, Cal Poly Humboldt</h2>
-  <p>
-    Built and maintained an augmented reality sandbox at Cal Poly Humboldt.  
-    <a href="https://www.youtube.com/watch?v=KxtqFZSNDHQ" target="_blank">Watch Video</a>
-  </p>
-  <img src="sandbox.jpg" alt="Sandbox Image" />
-
-  <h2>Capstone Project – Watershed Modeling with VELMA</h2>
-  <p>
-    Completed in partnership with Oregon State University and the EPA. I modeled Northern California watersheds using the VELMA 2.0 software and became the first person to model watersheds more than 100 sq miles. I successfully modeled the Eel, Trinity, and Noyo Rivers. Created and maintained a website with results, produced extensive documentation to run the software, along with interactive charts and maps.
-  </p>
-  <img src="velma.png" alt="VELMA Map" />
-  <img src="flow.png" alt="Flow Diagram" />
-  <img src="noyo.png" alt="Noyo River Map" />
+  <div class="section">
+    <div class="text">
+      <h2>Capstone Project – Watershed Modeling with VELMA</h2>
+      <p>Completed in partnership with Oregon State University and the EPA...</p>
+    </div>
+    <div class="images">
+      <img src="velma.png" alt="VELMA Map" />
+      <img src="flow.png" alt="Flow Diagram" />
+      <img src="noyo.png" alt="Noyo River Map" />
+    </div>
+  </div>
 
   <h2>Cartography Examples</h2>
-  <img src="Humboldt_Water.jpg" alt="Map 1" />
-  <img src="SugarRiver.jpg" alt="Map 2" />
-  <img src="alaska.jpg" alt="Map 3" />
-  <img src="all.png" alt="Map 4" />
+  <div class="gallery">
+    <img src="Humboldt_Water.jpg" alt="Map 1" />
+    <img src="SugarRiver.jpg" alt="Map 2" />
+    <img src="alaska.jpg" alt="Map 3" />
+    <img src="all.png" alt="Map 4" />
+  </div>
 
   <h2>Publications</h2>
   <ul>
-    <li>Gurung, B., Peterson, B. A., Fleming, S., et al. (2025). <em>Identification of High Fire Potential and High-Use Spatial Intersections at a National Forest to Understand Recreation Displacement Related to Wildfire Events.</em> Annals of the AAG.</li>
-    <li>Zhu, X., Helmer, E. H., Fleming, S., et al. (2021). <em>Dry-Season Phenology in Tropical Forests.</em> Remote Sensing 13(23), 4736.</li>
-    <li>Fleming, S. (2019). <em>Yosemite & Zion National Park.</em> Humboldt Journal of Social Relations.</li>
-    <li>Madurapperuma, B., Fleming, S., et al. (2019). <em>Social Values and Fragmentation in Dunes Trust.</em> HJSR.</li>
-    <li>Madurapperuma, B., Fleming, S., et al. (2018). <em>Ma-le'l Dunes UAV Mapping.</em> Proceedings of the Remote Sensing Conference.</li>
+    <li>Gurung, B., Peterson, B. A., Fleming, S., et al. (2025)...</li>
+    <li>Zhu, X., Helmer, E. H., Fleming, S., et al. (2021)...</li>
+    <li>Fleming, S. (2019)...</li>
+    <li>Madurapperuma, B., Fleming, S., et al. (2019)...</li>
+    <li>Madurapperuma, B., Fleming, S., et al. (2018)...</li>
   </ul>
 
   <h2>Conferences & Posters</h2>
