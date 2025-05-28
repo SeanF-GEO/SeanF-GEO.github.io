@@ -3,30 +3,31 @@ body {
   max-width: 800px;
   margin: 2rem auto;
   padding: 0 1rem;
-  color: #222;
+  background-color: #ffe8c2;
+  color: #0c2904;
   line-height: 1.7;
-  background-color: #ffffff;
 }
 
 h1 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #0c2904;
   padding-bottom: 0.5rem;
 }
 
 h2, h3 {
   margin-top: 2rem;
-  color: #333;
+  color: #0c2904;
 }
 
 a {
-  color: #1a5dab;
-  text-decoration: none;
+  color: #0c2904;
+  font-weight: 600;
+  text-decoration: underline;
 }
 
 a:hover {
-  text-decoration: underline;
+  opacity: 0.8;
 }
 
 img {
@@ -37,7 +38,7 @@ img {
   object-fit: cover;
   margin: 1rem 0;
   border-radius: 8px;
-  border: 1px solid #ddd;
+  border: 1px solid #0c2904;
 }
 
 p {
@@ -47,5 +48,5 @@ p {
 hr {
   margin: 2rem 0;
   border: none;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #0c2904;
 }
