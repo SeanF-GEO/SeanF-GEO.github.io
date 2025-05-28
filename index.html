@@ -191,6 +191,26 @@
     <li>GIS Day 2017–2018 — Organizer & Presenter</li>
     <li>INRSEP/CNRS 2017 — UAV Dune Mapping</li>
   </ul>
+  
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="Full Size" />
+</div>
+
+<script>
+  function openLightbox(src) {
+    const lightbox = document.getElementById('lightbox');
+    const img = document.getElementById('lightbox-img');
+    img.src = src;
+    lightbox.style.display = 'flex';
+  }
+
+  function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    const img = document.getElementById('lightbox-img');
+    lightbox.style.display = 'none';
+    img.src = '';
+  }
+</script>
 
 </body>
 </html>
