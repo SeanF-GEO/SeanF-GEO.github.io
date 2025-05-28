@@ -1,6 +1,6 @@
 # Sean F. — GIS & Cartography Portfolio
 
-**GIS Analyst | Cartographer | Python & R Developer | Esri Specialist**
+GIS Analyst | Cartographer | Python & R Developer | Esri Specialist**
 
 ---
 
