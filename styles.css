@@ -1,46 +1,41 @@
 <style>
-  /* Load National Park font manually */
-  @font-face {
-    font-family: 'National Park';
-    src: url('https://fonts.cdnfonts.com/s/92603/NationalPark-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
-
   body {
-    font-family: 'National Park', 'Segoe UI', Roboto, Helvetica, sans-serif;
+    font-family: 'Lucida Bright', Georgia, serif;
+    font-size: 20px;
+    line-height: 1.8;
+    background-color: #ffe8c2;
+    color: #435239;
     max-width: 1000px;
     margin: 2rem auto;
     padding: 0 1rem;
-    background-color: #ffe8c2;
-    color: #435239;
-    line-height: 1.8;
-    font-size: 20px;
   }
 
   h1 {
-    font-size: 3.5rem; /* Large page title */
+    font-size: 3.5rem;
+    font-weight: 700;
     margin-bottom: 1.5rem;
     border-bottom: 2px solid #435239;
     padding-bottom: 0.5rem;
-    font-weight: 700;
+    color: #435239;
   }
 
   h2 {
     font-size: 2.75rem;
-    margin-top: 2rem;
     font-weight: 600;
+    margin-top: 2rem;
+    color: #435239;
   }
 
   h3 {
     font-size: 2.25rem;
-    margin-top: 1.5rem;
     font-weight: 500;
+    margin-top: 1.5rem;
+    color: #435239;
   }
 
   p {
     margin: 1rem 0;
-    font-size: 1.375rem; /* Bigger paragraph text (~22px) */
+    font-size: 1.375rem;
     font-weight: 400;
   }
 
