@@ -1,12 +1,17 @@
+/* Load National Park font */
+@import url('https://fonts.cdnfonts.com/css/national-park');
+
 body {
-  font-family: 'Segoe UI', Roboto, Helvetica, sans-serif;
+  font-family: 'National Park', 'Segoe UI', Roboto, Helvetica, sans-serif;
   max-width: 1000px;
   margin: 2rem auto;
   padding: 0 1rem;
   background-color: #ffe8c2;
   color: #435239 !important;
   line-height: 1.7;
+  font-size: 18px; /* Paragraph one size larger */
 }
+
 .skills-container {
   display: flex;
   flex-wrap: wrap;
@@ -30,23 +35,33 @@ body {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 3rem; /* Title two sizes larger */
   margin-bottom: 1.5rem;
   border-bottom: 2px solid #435239;
   padding-bottom: 0.5rem;
   color: #435239 !important;
+  font-weight: 700; /* Bold */
 }
 
-h2, h3 {
+h2 {
+  font-size: 2.25rem; /* Title two sizes larger */
   margin-top: 2rem;
   color: #435239 !important;
+  font-weight: 600; /* SemiBold */
+}
+
+h3 {
+  font-size: 1.75rem; /* Slightly larger for clarity */
+  margin-top: 1.5rem;
+  color: #435239 !important;
+  font-weight: 500; /* Medium */
 }
 
 a {
   color: #435239 !important;
   font-weight: 600;
   text-decoration: underline;
-  font-size: 1.1rem;
+  font-size: 1.2rem; /* Slightly increased for readability */
 }
 
 a:hover {
@@ -54,7 +69,7 @@ a:hover {
 }
 
 .big-link {
-  font-size: 1.3rem;
+  font-size: 1.4rem; /* Larger clickable links */
   font-weight: bold;
   display: inline-block;
   margin: 0.5rem 0;
@@ -108,4 +123,5 @@ ul {
 
 li {
   margin-bottom: 0.5rem;
+  font-size: 18px; /* Matching paragraphs */
 }
