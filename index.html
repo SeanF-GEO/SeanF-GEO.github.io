@@ -4,130 +4,160 @@
   <meta name="robots" content="noindex, nofollow" />
   <title>Sean Fleming | GIS Portfolio</title>
 
-  <style>
-    body {
-      font-family: 'Lucida Bright', 'Georgia', serif;
-      font-size: 20px;
-      line-height: 1.8;
-      background-color: #ffe8c2;
-      color: #435239;
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
+ <style>
+  body {
+    font-family: 'Lucida Bright', 'Georgia', serif;
+    font-size: 20px;
+    line-height: 1.8;
+    background-color: #ffe8c2;
+    color: #435239;
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
 
-    h1 {
-      font-size: 3.5rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-      border-bottom: 2px solid #435239;
-      padding-bottom: 0.5rem;
-      color: #435239;
-    }
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #435239;
+    padding-bottom: 0.5rem;
+    color: #435239;
+  }
 
-    h2 {
-      font-size: 2.75rem;
-      font-weight: 600;
-      margin-top: 2rem;
-      color: #435239;
-    }
+  h2 {
+    font-size: 2.75rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    color: #435239;
+  }
 
-    h3 {
-      font-size: 2.25rem;
-      font-weight: 500;
-      margin-top: 1.5rem;
-      color: #435239;
-    }
+  h3 {
+    font-size: 2.25rem;
+    font-weight: 500;
+    margin-top: 1.5rem;
+    color: #435239;
+  }
 
-    p {
-      font-size: 1.375rem;
-      margin: 1rem 0;
-    }
+  p {
+    font-size: 1.375rem;
+    margin: 1rem 0;
+  }
 
-    a {
-      font-size: 1.25rem;
-      color: #435239;
-      font-weight: 600;
-      text-decoration: underline;
-    }
+  a {
+    font-size: 1.25rem;
+    color: #435239;
+    font-weight: 600;
+    text-decoration: underline;
+  }
 
-    a:hover {
-      opacity: 0.8;
-    }
+  a:hover {
+    opacity: 0.8;
+  }
 
-    .big-link {
-      font-size: 1.5rem;
-      font-weight: bold;
-      display: inline-block;
-      margin: 0.5rem 0;
-      color: #435239;
-      text-decoration: underline;
-    }
+  .big-link {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: inline-block;
+    margin: 0.5rem 0;
+    color: #435239;
+    text-decoration: underline;
+  }
 
-    .section {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      margin-bottom: 2rem;
-      align-items: flex-start;
-    }
+  .section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    align-items: flex-start;
+  }
 
-    .text, .images {
-      flex: 1 1 48%;
-    }
+  .text, .images {
+    flex: 1 1 48%;
+  }
 
-    .section img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      cursor: pointer;
-      border: 1px solid #435239;
-    }
+  .section img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid #435239;
+  }
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-    }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
 
-    .gallery img {
-      width: 100%;
-      height: auto;
-      cursor: pointer;
-      border-radius: 8px;
-      border: 1px solid #435239;
-    }
+  .gallery img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1px solid #435239;
+  }
 
-    ul {
-      padding-left: 1.2rem;
-    }
+  ul {
+    padding-left: 1.2rem;
+  }
 
-    li {
-      font-size: 1.375rem;
-      margin-bottom: 0.5rem;
-    }
+  li {
+    font-size: 1.375rem;
+    margin-bottom: 0.5rem;
+  }
 
-    .lightbox {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.9);
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-      padding: 2rem;
-      box-sizing: border-box;
-    }
+  .lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
 
-    .lightbox img {
-      max-width: 90vw;
-      max-height: 90vh;
-      object-fit: contain;
-    }
-  </style>
+  .lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+  }
+
+  /* New horizontal layout for publications, conferences, and skills */
+  .horizontal-sections {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .column {
+    flex: 1 1 300px;
+    min-width: 280px;
+  }
+
+  .column h2,
+  .column h3 {
+    margin-top: 0;
+  }
+
+  .column ul {
+    padding-left: 1.2rem;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .column li {
+    margin-bottom: 0.5rem;
+  }
+</style>
 </head>
 
 <body>
