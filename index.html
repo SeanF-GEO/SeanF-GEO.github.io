@@ -128,7 +128,7 @@
     object-fit: contain;
   }
 
-  /* New horizontal layout for publications, conferences, and skills */
+  /* Horizontal layout for Publications and Conferences */
   .horizontal-sections {
     display: flex;
     flex-wrap: wrap;
@@ -157,7 +157,23 @@
   .column li {
     margin-bottom: 0.5rem;
   }
+
+  /* Skills block appears below */
+  .skills-block {
+    margin-top: 2rem;
+  }
+
+  .skills-block ul {
+    padding-left: 1.2rem;
+    font-size: 1.25rem;
+    line-height: 1.6;
+  }
+
+  .skills-block li {
+    margin-bottom: 0.5rem;
+  }
 </style>
+
 </head>
 
 <body>
@@ -259,7 +275,7 @@
     <img src="all.png" alt="Map 4" onclick="openLightbox(this.src)" />
   </div>
 
- <div class="horizontal-sections">
+<div class="two-columns">
   <div class="column">
     <h2>Publications</h2>
     <ul>
@@ -283,32 +299,33 @@
       <li>INRSEP/CNRS 2017 — UAV Dune Mapping</li>
     </ul>
   </div>
-
-  <div class="column">
-    <h2>Skills</h2>
-
-    <h3>Technical & Programming</h3>
-    <ul>
-      <li>GIS (ArcGIS, QGIS, etc.)</li>
-      <li>Remote Sensing (GEE)</li>
-      <li>Python, R</li>
-      <li>Statistics & Modeling</li>
-    </ul>
-
-    <h3>Environmental Science & Ecology</h3>
-    <ul>
-      <li>Forest & Watershed Ecology</li>
-      <li>Wildfire Ecology</li>
-      <li>Environmental Management</li>
-    </ul>
-
-    <h3>Policy & Communication</h3>
-    <ul>
-      <li>NEPA</li>
-      <li>Public Speaking & Writing</li>
-    </ul>
-  </div>
 </div>
+
+<div class="skills-block">
+  <h2>Skills</h2>
+
+  <h3>Technical & Programming</h3>
+  <ul>
+    <li>GIS (ArcGIS, QGIS, etc.)</li>
+    <li>Remote Sensing (GEE)</li>
+    <li>Python, R</li>
+    <li>Statistics & Modeling</li>
+  </ul>
+
+  <h3>Environmental Science & Ecology</h3>
+  <ul>
+    <li>Forest & Watershed Ecology</li>
+    <li>Wildfire Ecology</li>
+    <li>Environmental Management</li>
+  </ul>
+
+  <h3>Policy & Communication</h3>
+  <ul>
+    <li>NEPA</li>
+    <li>Public Speaking & Writing</li>
+  </ul>
+</div>
+
 
 
 <!-- Lightbox Container -->
