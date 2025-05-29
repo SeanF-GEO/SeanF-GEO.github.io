@@ -1,150 +1,135 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
   <title>Sean Fleming | GIS Portfolio</title>
 
-  <!-- Load National Park font -->
-<!-- Load National Park font -->
-<!-- Load National Park font -->
-<link href="https://fonts.cdnfonts.com/css/national-park" rel="stylesheet">
-<style>
-  @font-face {
-    font-family: 'National Park';
-    src: url('https://fonts.cdnfonts.com/s/92603/NationalPark-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
+  <style>
+    body {
+      font-family: 'Lucida Bright', 'Georgia', serif;
+      font-size: 20px;
+      line-height: 1.8;
+      background-color: #ffe8c2;
+      color: #435239;
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
 
-body {
-  font-family: 'National Park', 'Segoe UI', Roboto, Helvetica, sans-serif;
-  font-size: 20px;
-  line-height: 1.8;
-  background-color: #ffe8c2;
-  color: #435239;
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid #435239;
+      padding-bottom: 0.5rem;
+      color: #435239;
+    }
 
+    h2 {
+      font-size: 2.75rem;
+      font-weight: 600;
+      margin-top: 2rem;
+      color: #435239;
+    }
 
-  h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    border-bottom: 2px solid #435239;
-    padding-bottom: 0.5rem;
-    color: #435239;
-  }
+    h3 {
+      font-size: 2.25rem;
+      font-weight: 500;
+      margin-top: 1.5rem;
+      color: #435239;
+    }
 
-  h2 {
-    font-size: 2.75rem;
-    font-weight: 600;
-    margin-top: 2rem;
-    color: #435239;
-  }
+    p {
+      font-size: 1.375rem;
+      margin: 1rem 0;
+    }
 
-  h3 {
-    font-size: 2.25rem;
-    font-weight: 500;
-    margin-top: 1.5rem;
-    color: #435239;
-  }
+    a {
+      font-size: 1.25rem;
+      color: #435239;
+      font-weight: 600;
+      text-decoration: underline;
+    }
 
-  p {
-    font-size: 1.375rem;
-    margin: 1rem 0;
-  }
+    a:hover {
+      opacity: 0.8;
+    }
 
-  a {
-    font-size: 1.25rem;
-    color: #435239;
-    font-weight: 600;
-    text-decoration: underline;
-  }
+    .big-link {
+      font-size: 1.5rem;
+      font-weight: bold;
+      display: inline-block;
+      margin: 0.5rem 0;
+      color: #435239;
+      text-decoration: underline;
+    }
 
-  a:hover {
-    opacity: 0.8;
-  }
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      align-items: flex-start;
+    }
 
-  .big-link {
-    font-size: 1.5rem;
-    font-weight: bold;
-    display: inline-block;
-    margin: 0.5rem 0;
-    color: #435239;
-    text-decoration: underline;
-  }
+    .text, .images {
+      flex: 1 1 48%;
+    }
 
-  .section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-bottom: 2rem;
-    align-items: flex-start;
-  }
+    .section img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      cursor: pointer;
+      border: 1px solid #435239;
+    }
 
-  .text, .images {
-    flex: 1 1 48%;
-  }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
 
-  .section img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    cursor: pointer;
-    border: 1px solid #435239;
-  }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+      border-radius: 8px;
+      border: 1px solid #435239;
+    }
 
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
+    ul {
+      padding-left: 1.2rem;
+    }
 
-  .gallery img {
-    width: 100%;
-    height: auto;
-    cursor: pointer;
-    border-radius: 8px;
-    border: 1px solid #435239;
-  }
+    li {
+      font-size: 1.375rem;
+      margin-bottom: 0.5rem;
+    }
 
-  ul {
-    padding-left: 1.2rem;
-  }
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      padding: 2rem;
+      box-sizing: border-box;
+    }
 
-  li {
-    font-size: 1.375rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .lightbox {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.9);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    padding: 2rem;
-    box-sizing: border-box;
-  }
-
-  .lightbox img {
-    max-width: 90vw;
-    max-height: 90vh;
-    object-fit: contain;
-  }
-</style>
-
-
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 90vh;
+      object-fit: contain;
+    }
+  </style>
 </head>
+
 <body>
   <h1>Sean Fleming — Environmental Science, GIS, & Remote Sensing Portfolio</h1>
 
