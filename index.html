@@ -190,17 +190,30 @@
 <body>
   <h1>Sean Fleming — Environmental Science, GIS, & Remote Sensing Portfolio</h1>
 
-  <div class="section">
-    <div class="text">
+<div class="section" style="flex-direction: column; gap: 2rem;">
+  <!-- First row: paragraph + image -->
+  <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start;">
+    <div class="text" style="flex: 1 1 55%;">
       <h2>Fire Ecology Research Fellow (ORISE funding by USFS)</h2>
-      <p>I developed GIS models to assess the potential impact of wildfires on recreational areas in Southern California’s National Forests. This was accomplished by creating scenario-based analyses under dry and moderate environmental conditions to identify high-risk recreational sites. This work supports forest management and safety planning. The deliverables were ArcGIS Online interactive Web Maps and StoryMaps to display data for USFS staff. (These publications are currently under review, so I attached screenshots and a PDF example rather than the web maps themselves.)</p>
+      <p>I developed GIS models to assess the potential impact of wildfires on recreational areas in Southern California’s National Forests. This was accomplished by creating scenario-based analyses under dry and moderate environmental conditions to identify high-risk recreational sites. This work supports forest management and safety planning.</p>
       <a href="Cleveland_StoryMap.pdf" target="_blank" class="big-link">PDF Example</a>
+    </div>
+    <div class="image" style="flex: 1 1 40%;">
+      <img src="ANF_WEBMAP.png" alt="Web Map" onclick="openLightbox(this.src)" />
+    </div>
+  </div>
+
+  <!-- Second row: paragraph + image -->
+  <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start;">
+    <div class="text" style="flex: 1 1 55%;">
       <p>I also designed and implemented Python, R, and Google Earth Engine GIS tools to automate the downloading and processing of thousands of satellite images. These images were used to conduct near real-time fire detection analyses across Northern California and compare results with fire severity models that I produced to enhance historical wildfire severity understanding.</p>
     </div>
-<div class="images" style="display: flex; flex-direction: column; gap: 1rem;">
-  <img src="ANF_WEBMAP.png" alt="Web Map" onclick="openLightbox(this.src)" />
-  <img src="ANTE_FINAL_smaller.jpg" alt="Fire Severity" onclick="openLightbox(this.src)" />
+    <div class="image" style="flex: 1 1 40%;">
+      <img src="ANTE_FINAL_smaller.jpg" alt="Fire Severity" onclick="openLightbox(this.src)" />
+    </div>
+  </div>
 </div>
+
 
   </div>
 
