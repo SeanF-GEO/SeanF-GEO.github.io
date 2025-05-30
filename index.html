@@ -254,30 +254,27 @@
     </div>
   </div>
 
-<div class="section" style="display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: flex-start; margin-bottom: 3rem;">
-  <!-- Text block with heading and paragraph -->
-  <div style="flex: 1 1 55%;">
+<div class="section" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+  <!-- Row 1: Paragraph + Flow image -->
+  <div style="grid-column: 1;">
     <h2>Capstone Project – Watershed Modeling with VELMA</h2>
     <p>
       Completed in partnership with Oregon State University and the EPA. I modeled Northern California watersheds using the VELMA 2.0 software and became the first person to model watersheds more than 100 sq miles. I successfully modeled the Eel, Trinity, and Noyo Rivers. Created and maintained a website with results, produced extensive documentation to run the software, along with interactive charts and maps.
     </p>
   </div>
-
-  <!-- First image aligned with end of paragraph -->
-  <div style="flex: 1 1 40%; display: flex; align-items: flex-end;">
-    <img src="velma.png" alt="VELMA Map" onclick="openLightbox(this.src)" style="width: 100%; border-radius: 8px; border: 1px solid #435239; cursor: pointer;" />
-  </div>
-</div>
-
-<!-- Second row with two images -->
-<div class="section" style="display: flex; flex-wrap: wrap; gap: 1.5rem;">
-  <div style="flex: 1 1 48%;">
+  <div style="grid-column: 2;">
     <img src="flow.png" alt="Flow Diagram" onclick="openLightbox(this.src)" style="width: 100%; border-radius: 8px; border: 1px solid #435239; cursor: pointer;" />
   </div>
-  <div style="flex: 1 1 48%;">
+
+  <!-- Row 2: Two side-by-side images -->
+  <div>
+    <img src="velma.png" alt="VELMA Map" onclick="openLightbox(this.src)" style="width: 100%; border-radius: 8px; border: 1px solid #435239; cursor: pointer;" />
+  </div>
+  <div>
     <img src="noyo.png" alt="Noyo River Map" onclick="openLightbox(this.src)" style="width: 100%; border-radius: 8px; border: 1px solid #435239; cursor: pointer;" />
   </div>
 </div>
+
 
 
 
