@@ -253,9 +253,9 @@
       <img src="sandbox.jpg" alt="Sandbox Image" onclick="openLightbox(this.src)" />
     </div>
   </div>
-
-<div class="section" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
-  <!-- Row 1: Paragraph + Flow image -->
+  
+<div class="section" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; grid-template-rows: auto auto;">
+  <!-- Row 1: Paragraph and velma image -->
   <div style="grid-column: 1;">
     <h2>Capstone Project – Watershed Modeling with VELMA</h2>
     <p>
@@ -263,17 +263,18 @@
     </p>
   </div>
   <div style="grid-column: 2;">
-    <img src="flow.png" alt="Flow Diagram" onclick="openLightbox(this.src)" style="width: 100%; border-radius: 8px; border: 1px solid #435239; cursor: pointer;" />
-  </div>
-
-  <!-- Row 2: Two side-by-side images -->
-  <div>
     <img src="velma.png" alt="VELMA Map" onclick="openLightbox(this.src)" style="width: 100%; border-radius: 8px; border: 1px solid #435239; cursor: pointer;" />
   </div>
-  <div>
+
+  <!-- Row 2: Graph and noyo map -->
+  <div style="grid-column: 1;">
+    <img src="flow.png" alt="Flow Diagram" onclick="openLightbox(this.src)" style="width: 100%; border-radius: 8px; border: 1px solid #435239; cursor: pointer;" />
+  </div>
+  <div style="grid-column: 2;">
     <img src="noyo.png" alt="Noyo River Map" onclick="openLightbox(this.src)" style="width: 100%; border-radius: 8px; border: 1px solid #435239; cursor: pointer;" />
   </div>
 </div>
+
 
 
 
