@@ -24,13 +24,7 @@
     padding-bottom: 0.5rem;
     color: #435239;
   }
-  
-<nav class="tab-nav">
-  <button class="tab-button active" onclick="showTab('research', event)">Work History</button>
-  <button class="tab-button" onclick="showTab('cartography', event)">Code and Cartography Examples</button>
-  <button class="tab-button" onclick="showTab('skills', event)">Publications and Skills</button>
-</nav>
-  
+
   h2 {
     font-size: 2.15rem;
     font-weight: 600;
@@ -57,37 +51,6 @@
     font-weight: 600;
     text-decoration: underline;
   }
-.tab-nav {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin: 2rem 0;
-  flex-wrap: wrap;
-}
-
-.tab-button {
-  background: #435239;
-  color: #ffe8c2;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1.25rem;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.tab-button:hover,
-.tab-button.active {
-  background: #2e3c29;
-}
-
-.tab-content {
-  display: none;
-}
-
-.tab-content.active {
-  display: block;
-}
 
   a:hover {
     opacity: 0.8;
@@ -225,7 +188,6 @@
 </head>
 
 <body>
-<div id="research" class="tab-content active">
   <h1>Sean Fleming — Environmental Science, GIS, & Remote Sensing Portfolio</h1>
 
 <div class="section">
@@ -317,14 +279,13 @@
     <img src="noyo.png" alt="Noyo River Map" onclick="openLightbox(this.src)" style="width: 100%; border-radius: 8px; border: 1px solid #435239; cursor: pointer;" />
   </div>
 </div>
-</div>
 
 
 
 
 
 
-<div id="cartography" class="tab-content">
+
 <h2>Code Examples</h2>
 
   <div class="section">
@@ -366,8 +327,7 @@
     <img src="alaska.jpg" alt="Map 3" onclick="openLightbox(this.src)" />
     <img src="all.png" alt="Map 4" onclick="openLightbox(this.src)" />
   </div>
-</div>
-<div id="skills" class="tab-content">
+
 <div class="horizontal-sections publications-conferences">
   <div class="column">
     <h2>Publications</h2>
@@ -470,7 +430,6 @@
 
   </div>
 </div>
-</div>
 
 
 
@@ -495,18 +454,9 @@
     lightbox.style.display = 'none';
     img.src = '';
   }
-    function showTab(tabId, event) {
-    document.querySelectorAll('.tab-content').forEach(tab => {
-      tab.classList.remove('active');
-    });
-    document.getElementById(tabId).classList.add('active');
-
-    document.querySelectorAll('.tab-button').forEach(btn => {
-      btn.classList.remove('active');
-    });
-    event.target.classList.add('active');
-  }
 </script>
 
 </body>
 </html>
+
+
