@@ -25,6 +25,38 @@
     color: #435239;
   }
 
+  .tab-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+  }
+
+  .tab-button {
+    background: #435239;
+    color: #ffe8c2;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.25rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .tab-button:hover,
+  .tab-button.active {
+    background: #2e3c29;
+  }
+
+  .tab-content {
+    display: none;
+  }
+
+  .tab-content.active {
+    display: block;
+  }
+
   h2 {
     font-size: 2.15rem;
     font-weight: 600;
@@ -180,15 +212,23 @@
   }
 
   .publications-conferences li {
-  font-size: 1.05rem;
-  line-height: 1.6;
-}
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
 </style>
-
 </head>
 
 <body>
   <h1>Sean Fleming — Environmental Science, GIS, & Remote Sensing Portfolio</h1>
+
+  <nav class="tab-nav">
+    <button class="tab-button active" onclick="showTab('tab-work', event)">Work History</button>
+    <button class="tab-button" onclick="showTab('tab-code', event)">Code & Cartography</button>
+    <button class="tab-button" onclick="showTab('tab-skills', event)">Publications & Skills</button>
+  </nav>
+
+  <div id="tab-work" class="tab-content active">
+    <!-- All Work History content goes here -->
 
 <div class="section">
   <div class="text" style="flex: 1 1 100%;">
@@ -208,70 +248,51 @@
   </div>
 </div>
 
-
-    <div style="display: flex; gap: 1.5rem; margin-top: 2rem;">
-      <div style="flex: 1;">
-<p>I designed and implemented GIS tools using Python, R, and Google Earth Engine to automate the downloading and processing of satellite imagery from GOES, VIIRS, MODIS, Landsat, and Sentinel. These datasets were combined to reconstruct the progression and behavior of historical wildfires at a fine temporal resolution. By integrating this imagery with weather data, I analyzed how fires evolved over time and compared these patterns with fire severity models I developed, enhancing understanding of wildfire growth and historical severity.</p>      </div>
-      <div style="flex: 1;">
-        <img src="ANTE_FINAL_smaller.jpg" alt="Fire Severity" onclick="openLightbox(this.src)" style="width: 100%; border-radius: 8px; border: 1px solid #435239; cursor: pointer;" />
-      </div>
-    </div>
+<div style="display: flex; gap: 1.5rem; margin-top: 2rem;">
+  <div style="flex: 1;">
+    <p>I designed and implemented GIS tools using Python, R, and Google Earth Engine to automate the downloading and processing of satellite imagery from GOES, VIIRS, MODIS, Landsat, and Sentinel. These datasets were combined to reconstruct the progression and behavior of historical wildfires at a fine temporal resolution. By integrating this imagery with weather data, I analyzed how fires evolved over time and compared these patterns with fire severity models I developed, enhancing understanding of wildfire growth and historical severity.</p>
+  </div>
+  <div style="flex: 1;">
+    <img src="ANTE_FINAL_smaller.jpg" alt="Fire Severity" onclick="openLightbox(this.src)" style="width: 100%; border-radius: 8px; border: 1px solid #435239; cursor: pointer;" />
   </div>
 </div>
 
-
-
+<div class="section">
+  <div class="text">
+    <h2>Graduate Research Assistant, Cal Poly Humboldt</h2>
+    <p>I conducted spatial and statistical analyses to assess changes in forest phenology using satellite imagery, and examined their relationship to shifts in aboveground live biomass and drought-related tree mortality using Forest Inventory and Analysis (FIA) data. I used Python, R, Oracle VM VirtualBox, Ubuntu, and Linux to generate Landsat angle files and produce cloud-free time series imagery. This multistep process, carried out in ENVI/IDL software, included correcting for solar and sensor angle differences, stacking the imagery, masking water pixels, screening for clouds and shadows, and repairing image artifacts. I calculated spectral indices such as EVI, NDMI, and NDVI, extracted forest phenology metrics, and harmonized the remote sensing data with FIA datasets. I also performed multivariate statistical analyses to explore these ecological relationships.</p>
+    <p><a href="https://digitalcommons.humboldt.edu/etd/787/" target="_blank">Read Thesis</a></p>
   </div>
-
-  <div class="section">
-    <div class="text">
-      <h2>Graduate Research Assistant, Cal Poly Humboldt</h2>
-<p>I conducted spatial and statistical analyses to assess changes in forest phenology using satellite imagery, and examined their relationship to shifts in aboveground live biomass and drought-related tree mortality using Forest Inventory and Analysis (FIA) data. I used Python, R, Oracle VM VirtualBox, Ubuntu, and Linux to generate Landsat angle files and produce cloud-free time series imagery. This multistep process, carried out in ENVI/IDL software, included correcting for solar and sensor angle differences, stacking the imagery, masking water pixels, screening for clouds and shadows, and repairing image artifacts. I calculated spectral indices such as EVI, NDMI, and NDVI, extracted forest phenology metrics, and harmonized the remote sensing data with FIA datasets. I also performed multivariate statistical analyses to explore these ecological relationships.</p>      <p><a href="https://digitalcommons.humboldt.edu/etd/787/" target="_blank">Read Thesis</a></p>
-    </div>
-  </div>
+</div>
 
 <div class="section" style="display: block; overflow: auto;">
   <h2>GIS & Remote Sensing Student Research Assistant</h2>
-
   <img src="tahoe.jpg" alt="Tahoe Bioregion Map" style="float: right; width: 38%; margin-left: 1.5rem; margin-bottom: 1rem; border-radius: 8px; border: 1px solid #435239; cursor: pointer;" onclick="openLightbox(this.src)" />
-
   <img src="Shasta_Trinity_map-01.png" alt="Shasta Trinity Map" style="float: right; width: 38%; margin-left: 1.5rem; margin-bottom: 1rem; border-radius: 8px; border: 1px solid #435239; cursor: pointer;" onclick="openLightbox(this.src)" />
-
-<p>I utilized the LANDIS-II forest landscape model to simulate fire emissions in the Lake Tahoe bioregion. In addition, I used Python and R to georeference and extract data from over 30,000 raster images. Data sources such as gridMET, PRISM, and TERRAclimate were integrated with forest modeling tools to estimate fuel loads and fire severity. GPS and GIS software supported site selection for tree core sampling. Project deliverables included technical reports, presentations, and outreach materials such as PowerPoints, published documents, and spatial maps.</p>
+  <p>I utilized the LANDIS-II forest landscape model to simulate fire emissions in the Lake Tahoe bioregion. In addition, I used Python and R to georeference and extract data from over 30,000 raster images. Data sources such as gridMET, PRISM, and TERRAclimate were integrated with forest modeling tools to estimate fuel loads and fire severity. GPS and GIS software supported site selection for tree core sampling. Project deliverables included technical reports, presentations, and outreach materials such as PowerPoints, published documents, and spatial maps.</p>
 </div>
 
-
-
-
-
-
-  <div class="section">
-    <div class="text">
-      <h2>Augmented Reality Sandbox Manager</h2>
-      <p>Assembled, installed, and maintained an interactive augmented reality sandbox at Cal Poly Humboldt. The exhibit allowed community members to play with the sand in real time and see topographic maps projected onto the surface — creating a playful, educational experience for visitors of all ages.</p>
-      <p><a href="https://www.youtube.com/watch?v=KxtqFZSNDHQ" target="_blank">Watch Video</a></p>
-    </div>
-    <div class="images">
-      <img src="sandbox.jpg" alt="Sandbox Image" onclick="openLightbox(this.src)" />
-    </div>
+<div class="section">
+  <div class="text">
+    <h2>Augmented Reality Sandbox Manager</h2>
+    <p>Assembled, installed, and maintained an interactive augmented reality sandbox at Cal Poly Humboldt. The exhibit allowed community members to play with the sand in real time and see topographic maps projected onto the surface — creating a playful, educational experience for visitors of all ages.</p>
+    <p><a href="https://www.youtube.com/watch?v=KxtqFZSNDHQ" target="_blank">Watch Video</a></p>
   </div>
-  
+  <div class="images">
+    <img src="sandbox.jpg" alt="Sandbox Image" onclick="openLightbox(this.src)" />
+  </div>
+</div>
+
 <div class="section" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
-  <!-- Header spanning both columns -->
   <div style="grid-column: 1 / -1;">
     <h2 style="margin-bottom: 0.5rem;">Undergraduate Capstone Project – Watershed Modeling With VELMA2.0</h2>
   </div>
-
-  <!-- Paragraph and image side by side -->
   <div>
     <p style="margin-top: 0;">In partnership with Oregon State University and the EPA, I modeled Northern California watersheds using VELMA 2.0 software, becoming the first to successfully model watersheds exceeding 100 square miles. This included the Eel, Trinity, and Noyo Rivers. I also created and maintained a website to share results, developed extensive documentation to support software use, and produced interactive charts and maps to communicate key findings.</p>
   </div>
-
   <div>
     <img src="velma.png" alt="VELMA Map" onclick="openLightbox(this.src)" style="width: 100%; border-radius: 8px; border: 1px solid #435239; cursor: pointer;" />
   </div>
-
-  <!-- Bottom two images -->
   <div>
     <img src="flow.png" alt="Flow Diagram" onclick="openLightbox(this.src)" style="width: 100%; border-radius: 8px; border: 1px solid #435239; cursor: pointer;" />
   </div>
@@ -280,35 +301,31 @@
   </div>
 </div>
 
+  </div> <!-- End of tab-work -->
 
-
-
-
-
+<div id="tab-code" class="tab-content">
 
 <h2>Code Examples</h2>
-
-  <div class="section">
-<div class="text">
-  <h3>GOES Satellite Data</h3>
-  <p>Downloads GOES-16 and GOES-17 temperature and fire radiative power (FRP) data, renames files using Pacific Time, organizes them into daily and hourly folders, and mosaics each hour into a single raster.</p>
-  <a href="https://github.com/SeanF-GEO/GEE-Satellite-Processing-Methods/tree/main/GOES" class="big-link" target="_blank">View GOES Scripts on GitHub</a>
-</div>
-
-<div class="text">
-  <h3>MODIS Satellite Data</h3>
-  <p>Uses Google Earth Engine to download daily fire radiative power (FRP) data from MODIS Aqua and Terra satellites.</p>
-  <a href="https://github.com/SeanF-GEO/GEE-Satellite-Processing-Methods/tree/main/MODIS" class="big-link" target="_blank">View MODIS Scripts on GitHub</a>
-</div>
-
-<div class="text">
-  <h3>VIIRS Satellite Data</h3>
-  <p>Processes VIIRS active fire data in R by converting NetCDF files into shapefiles and CSVs for spatial analysis.</p>
-  <a href="https://github.com/SeanF-GEO/GEE-Satellite-Processing-Methods/tree/main/VIIRS" class="big-link" target="_blank">View VIIRS Scripts on GitHub</a>
-</div>
-</div>
-
+<div class="section" style="display: flex; flex-wrap: wrap; gap: 2rem;">
+  <div class="text" style="flex: 1 1 300px;">
+    <h3>GOES Satellite Data</h3>
+    <p>Downloads GOES-16 and GOES-17 temperature and fire radiative power (FRP) data, renames files using Pacific Time, organizes them into daily and hourly folders, and mosaics each hour into a single raster.</p>
+    <a href="https://github.com/SeanF-GEO/GEE-Satellite-Processing-Methods/tree/main/GOES" class="big-link" target="_blank">View GOES Scripts on GitHub</a>
   </div>
+
+  <div class="text" style="flex: 1 1 300px;">
+    <h3>MODIS Satellite Data</h3>
+    <p>Uses Google Earth Engine to download daily fire radiative power (FRP) data from MODIS Aqua and Terra satellites.</p>
+    <a href="https://github.com/SeanF-GEO/GEE-Satellite-Processing-Methods/tree/main/MODIS" class="big-link" target="_blank">View MODIS Scripts on GitHub</a>
+  </div>
+
+  <div class="text" style="flex: 1 1 300px;">
+    <h3>VIIRS Satellite Data</h3>
+    <p>Processes VIIRS active fire data in R by converting NetCDF files into shapefiles and CSVs for spatial analysis.</p>
+    <a href="https://github.com/SeanF-GEO/GEE-Satellite-Processing-Methods/tree/main/VIIRS" class="big-link" target="_blank">View VIIRS Scripts on GitHub</a>
+  </div>
+</div>
+
 <h2>Drought Monitor WebMap</h2>
 <iframe 
   src="https://seanf-geo.github.io/drought-map/" 
@@ -319,14 +336,17 @@
   loading="lazy">
 </iframe>
 
+<h2>Cartography Examples</h2>
+<div class="gallery">
+  <img src="Humboldt_Water.jpg" alt="Map 1" onclick="openLightbox(this.src)" />
+  <img src="SugarRiver.jpg" alt="Map 2" onclick="openLightbox(this.src)" />
+  <img src="alaska.jpg" alt="Map 3" onclick="openLightbox(this.src)" />
+  <img src="all.png" alt="Map 4" onclick="openLightbox(this.src)" />
+</div>
 
-  <h2>Cartography Examples</h2>
-  <div class="gallery">
-    <img src="Humboldt_Water.jpg" alt="Map 1" onclick="openLightbox(this.src)" />
-    <img src="SugarRiver.jpg" alt="Map 2" onclick="openLightbox(this.src)" />
-    <img src="alaska.jpg" alt="Map 3" onclick="openLightbox(this.src)" />
-    <img src="all.png" alt="Map 4" onclick="openLightbox(this.src)" />
-  </div>
+</div>
+
+<div id="tab-skills" class="tab-content">
 
 <div class="horizontal-sections publications-conferences">
   <div class="column">
@@ -387,12 +407,10 @@
   </div>
 </div>
 
-
-
 <div class="mentions-block">
   <h2>Volunteering & Mentions</h2>
   <div class="mentions-columns" style="display: flex; flex-wrap: wrap; gap: 2rem;">
-    
+
     <div class="mention-column" style="flex: 1 1 30%;">
       <h3>Volunteer Work</h3>
       <ul>
@@ -401,7 +419,7 @@
         <li>Cook Inletkeeper</li>
       </ul>
     </div>
-    
+
     <div class="mention-column" style="flex: 1 1 30%;">
       <h3>Recognition</h3>
       <ul>
@@ -431,6 +449,9 @@
   </div>
 </div>
 
+</div>
+
+
 
 
 
@@ -439,8 +460,9 @@
   <img id="lightbox-img" src="" alt="Full Size" />
 </div>
 
-<!-- Lightbox Script -->
+<!-- Scripts -->
 <script>
+  // Lightbox Functions
   function openLightbox(src) {
     const lightbox = document.getElementById('lightbox');
     const img = document.getElementById('lightbox-img');
@@ -454,6 +476,26 @@
     lightbox.style.display = 'none';
     img.src = '';
   }
+
+  // Tab Switching Functions
+  function showTab(tabId, event) {
+    const tabs = document.querySelectorAll('.tab-content');
+    const buttons = document.querySelectorAll('.tab-button');
+
+    tabs.forEach(tab => tab.style.display = 'none');
+    buttons.forEach(button => button.classList.remove('active'));
+
+    document.getElementById(tabId).style.display = 'block';
+    event.currentTarget.classList.add('active');
+  }
+
+  // Initialize tabs on page load
+  window.onload = function () {
+    const tabs = document.querySelectorAll('.tab-content');
+    tabs.forEach((tab, i) => {
+      tab.style.display = i === 0 ? 'block' : 'none';
+    });
+  };
 </script>
 
 </body>
